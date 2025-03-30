@@ -1,0 +1,166 @@
+.torenizing-carousel {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.media-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: auto;
+  aspect-ratio: 16/9;
+  max-width: 1200px;
+  max-height: 80vh;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.project-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.project-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+}
+
+.image-wrapper:hover .project-image {
+  opacity: 0;
+}
+
+.image-wrapper:hover .project-video {
+  opacity: 1;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  color: var(--text-color);
+  text-align: left;
+  max-width: 50%;
+  z-index: 10;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.project-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 80%;
+  font-weight: 300;
+}
+
+.demo-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: white;
+  color: var(--text-color);
+  border: 2px solid var(--imp-text-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.demo-button:hover {
+  background: var(--imp-text-color);
+  color: var(--bg-color);
+}
+
+.slick-dots {
+  bottom: 40px;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.slick-dots li button:before {
+  color: var(--imp-text-color);
+  font-size: 10px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .project-info {
+    max-width: 80%;
+  }
+  
+  .project-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-info {
+    max-width: 90%;
+    bottom: 10%;
+  }
+  
+  .project-title {
+    font-size: 2rem;
+  }
+  
+  .project-subtitle {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+}

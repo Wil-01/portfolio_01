@@ -1,0 +1,13 @@
+/* Experience.css */
+.experience-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .vertical-timeline::before {
+    background: #915eff !important;
+  }
+  
+  .vertical-timeline-element-content {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+  }
